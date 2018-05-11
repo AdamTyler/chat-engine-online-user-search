@@ -2,9 +2,16 @@
   "author": "Ian Jennings",
   "name": "chat-engine-online-user-search",
   "version": "0.0.10",
-  "main": "src/plugin.js",
+  "main": "src/plugin-compiled.js",
   "dependencies": {
     "chat-engine": "^0.8.3",
     "dotty": "0.0.2"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0"
+  },
+  "scripts": {
+    "build": "babel src/plugin.js -o src/plugin-compiled.js --presets=env"
   }
 }
